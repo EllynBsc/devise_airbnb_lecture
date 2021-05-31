@@ -1,2 +1,20 @@
 <h1>Pages#home</h1>
 <p>Find me in app/views/pages/home.html.erb</p>
+
+<h1>Hello welcome!</h1>
+
+<!-- 2 New helper methods from devise gem -->
+<!-- user_signed_in? -->
+
+<% if user_signed_in? %>
+<p>Bonjour you're inside of the app, welcome</p>
+<% else %>
+<p>Bonjour you're not signed up</p>
+
+<% end %>
+
+<% if current_user %>
+<%= current_user.encrypted_password %>
+
+<% end %>
+
